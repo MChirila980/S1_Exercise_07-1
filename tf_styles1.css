@@ -24,134 +24,136 @@
 /* HTML and Body Styles */
 
 html {
-   background: url(tf_back1.png) center center / cover no-repeat fixed;
-   height: 100%;
-   font-family: Verdana, Geneva, sans-serif;
-   font-size: 12px;
+    background: url(tf_back1.png) center center / cover no-repeat fixed;
+    height: 100%;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
 }
 
 body {
-   background: rgb(134, 176, 232);   
-   box-shadow: rgb(51, 51, 51) 5px 0px 15px,
-               rgb(51, 51, 51) -5px 0px 15px;
-   margin: 0px auto;
-   min-height: 100%;
-   min-width: 320px;
-   max-width: 1024px;
-   width: 100%;
+    background: rgb(134, 176, 232);
+    box-shadow: rgb(51, 51, 51) 5px 0px 15px,
+        rgb(51, 51, 51) -5px 0px 15px;
+    margin: 0px auto;
+    min-height: 100%;
+    min-width: 320px;
+    max-width: 1024px;
+    width: 100%;
 }
 
 /* Body Header Styles */
 
 body header {
-   background: rgb(134,176,232);   
+    background: rgb(134, 176, 232);
 }
 
 body header img {
-   display: block;
-   width: 100%;
+    display: block;
+    width: 100%;
 }
 
 /* Horizonal Navigation Styles */
 
 nav.horizontal {
-   background-color: rgb(117, 140, 72);
-   min-height: 2em;
+    background-color: rgb(117, 140, 72);
+    min-height: 2em;
 }
 
 nav.horizontal li {
-   color: rgb(31, 73, 125);
-   display: block;
-   line-height: 2em;
-   text-transform: uppercase;
+    color: rgb(31, 73, 125);
+    display: block;
+    line-height: 2em;
+    text-transform: uppercase;
 }
 
 nav.horizontal a {
-   display: block;
-   font-size: 1em;
+    display: block;
+    font-size: 1em;
 }
 
-nav.horizontal a:visited, nav.horizontal a:link {
-   color: rgb(31, 73, 125);
+nav.horizontal a:visited,
+nav.horizontal a:link {
+    color: rgb(31, 73, 125);
 }
 
-nav.horizontal a:hover, nav.horizontal a:active {
-   background-color: rgb(31, 73, 125);
-   color: white;
+nav.horizontal a:hover,
+nav.horizontal a:active {
+    background-color: rgb(31, 73, 125);
+    color: white;
 }
 
 /* Main Menu Styles */
 
 ul.mainmenu {
-   display: block;
+    display: block;
 }
 
-ul.mainmenu > li {
-   text-indent: 15px;
+ul.mainmenu>li {
+    text-indent: 15px;
 }
 
-ul.mainmenu > li:first-of-type a {
-   color: white;
-   background-color: rgb(31, 73, 125);
+ul.mainmenu>li:first-of-type a {
+    color: white;
+    background-color: rgb(31, 73, 125);
 }
 
 /* Submenu Styles */
 
 ul.submenu {
-   width: 100%;
-   background-color: rgb(181, 204, 136);
+    width: 100%;
+    background-color: rgb(181, 204, 136);
 }
 
 
 /* Section Styles */
 
 section {
-   background-color: rgb(207, 222, 172);
-   clear: both;
+    background-color: rgb(207, 222, 172);
+    clear: both;
 }
 
 section::after {
-   content: "";
-   display: table;
-   clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 section img {
-   display: block;
-   width: 100%;
+    display: block;
+    width: 100%;
 }
 
 section p {
-   line-height: 1.4em;
-   padding: 10px;
-   font-size: 1.2em;
+    line-height: 1.4em;
+    padding: 10px;
+    font-size: 1.2em;
 }
 
 /* Aside Styles */
 
 aside {
-   display: block;
-   background-color: rgb(181, 204, 136);
+    display: block;
+    background-color: rgb(181, 204, 136);
 }
 
 /* Footer Styles */
 
-body > footer {
-   background-color: rgb(117, 140, 72);
-   font-size: 0.9em;
-   text-align: center;
-   padding: 10px 0px;
+body>footer {
+    background-color: rgb(117, 140, 72);
+    font-size: 0.9em;
+    text-align: center;
+    padding: 10px 0px;
 }
 
 /* Pulldown Menu Styles */
 .submenu {
     display: none;
- }
- 
- a.submenuTitle:hover+ul.submenu,
- ul.submenu:hover {
+}
+
+a.submenuTitle:hover+ul.submenu,
+ul.submenu:hover {
     display: block;
- }
+}
 
 
 
@@ -163,7 +165,15 @@ body > footer {
    ===========
 */
 
-@media screen and (max-width:480px){
+@media screen and (max-width:480px) {
+    .horizontal a {
+        font-size: 1.5em;
+        line-height: 2.2em;
+    }
+
+    aside {
+        display: none;
+    }
 
 }
 
@@ -173,8 +183,12 @@ body > footer {
    ===========
 */
 
-@media screen and (min-width:481px){
-
+@media screen and (min-width:481px) {
+    .submenu {
+        box-shadow: rgb(51, 51, 51) 5px 5px 15px;
+        position: absolute;
+        width: 20%
+    }
 }
 
 
@@ -183,6 +197,13 @@ body > footer {
    ===========
 */
 
-@media screen and (min-width:769px){
+@media screen and (min-width:769px) {
+    .submenu {
+        background: transparent;
+        box-shadow: none;
+        display: block;
+        position: relative;
+        width: 100%;
+    }
 
 }
